@@ -1,0 +1,27 @@
+body
+{
+    box-sizing: border-box;
+    background-color: #4CBAB5;
+    color: rgb(233, 243, 245);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.navbar-bg{
+    background-color: #183B39;
+}
+.card-bg{
+    background-color: #327A77;   
+}
+.card-body{
+    height: 100%;
+    width: 100%;
+}
+.card-text{
+    font-size: 22px;
+}
+.card-title{
+    font-size: 27px;   
+}
+.img-fluid{
+    height: 100%;
+    width: 100%;
+}
