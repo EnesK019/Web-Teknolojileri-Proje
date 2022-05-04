@@ -8,6 +8,9 @@ body
 .navbar-bg{
     background-color: #183B39;
 }
+.card{
+    border: #183B39;
+}
 .card-bg{
     background-color: #327A77;   
 }
