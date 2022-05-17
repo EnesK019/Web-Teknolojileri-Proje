@@ -1,7 +1,7 @@
 body
 {
     box-sizing: border-box;
-    background-color: #4CBAB5 ;
+    background-color: #39a7a1 ;
     color: rgb(233, 243, 245);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;  
@@ -35,4 +35,99 @@ body
 {
     height: 100%;
     width: 100%;
+}
+.slide-stil
+{
+    height: 600px;
+}
+p
+{
+    font-size: 18px;
+}
+.foto-marjinl
+{
+    margin-left: 200px;
+}
+.foto-marjinr
+{
+    margin-right: 200px;
+}
+.cizgi1
+{
+    height: 10px;
+    width: 400px;
+    background-color: #246360;      
+}
+#cv-cizgi-margin
+{
+    margin-left: 100px;
+}
+.sekil-margin
+{
+    margin-top: 50px;
+    margin-left: 150px;
+}
+#cv-yazi
+{
+    font-size: 23px;
+}
+.dolu-kutu
+{
+    height: 34px;
+    width: 18px;
+    background-color: #183B39;
+    border: 1px;
+    border-color: #183B39;
+    float: left;
+    margin-left: 4px;
+}
+.bos-kutu
+{
+    height: 34px;
+    width: 18px;
+    background-color: #39a7a1;
+    border: 3px solid #246360;
+    float: left;
+    margin-left: 4px;
+}
+#cv-yazi-2
+{
+    font-size: 20.5px;
+}
+.cv-bg
+{
+   background-color: #39a7a1; 
+}
+.footer-bg
+{
+    background-color: #245d5a;
+}
+#tanıtım-boyut
+{
+    font-size: 20px;
+}
+.card-boyut
+{
+    max-width: 910px;
+}
+#cv-baslik-boyut
+{
+    font-size: 70px;
+}
+#cv-foto-boyut
+{
+    height: 300px;
+}
+#cv-tel
+{
+    font-size: 23px;
+}
+#miras-foto-boyut
+{
+    height: 750px;
+}
+.slider-boyut
+{
+    width: 900px;
+    height: 650px;
 }

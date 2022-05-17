@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>İletişim</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    
+  <nav class="navbar navbar-expand-md navbar-dark navbar-bg fixed-top">
+    <div class="container row">
+      <div class="col-1 ">
+        <a class="navbar-brand ms-2" href="index.html"> <img src="images/logo1.jpg" alt="" style="width: 100px; height: 50px;"></a>
+      </div>
+      
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <div class="col-11 container">
+           <ul class="navbar-nav me-3 mb-lg-0">
+            <li class="nav-item me-3">
+               <a class="nav-link"  href="index.html">Hakkımda</a>
+            </li>
+            <li class="nav-item me-3">
+             <a class="nav-link" href="egitim.html">Özgeçmiş</a>
+            </li>
+            <li class="nav-item me-3">
+             <a class="nav-link" href="sehrim.html">Şehrim</a>
+           </li>
+           <li class="nav-item me-3">
+              <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
+            </li>
+             <li class="nav-item me-3">
+               <a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a>
+             </li>
+             <li class="nav-item me-3">
+              <a class="nav-link active" aria-current="page" href="iletisim.html">İletişim</a>
+            </li>
+            <li class="nav-item me-3">
+               <a class="nav-link" href="login.php">Login</a>
+            </li>
+         </ul>    
+        </div>
+      </div>
+    </div>
+  </nav>
+<br><br><br><br>
+  <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  function validate() {
+    var x = document.forms["myForm"]["ad"].value;
+    if (x == "") {
+      alert("İsim kısmı boş bırakılamaz..!");
+      return false;
+    }
+    var y = document.forms["myForm"]["soyad"].value;
+    if (y == "") {
+      alert("Soyisim kısmı boş bırakılamaz..!");
+      return false;
+    }
+    var z = document.forms["myForm"]["mail"].value;
+    if (z == "") {
+      alert("Mail Adresiniz Kısmı Boş Bırakılamaz..!");
+    }
+    var d = document.forms["myForm"]["message"].value;
+    if (d == "") {
+      alert("Lütfen mesajını yazar mısınız..?");
+    }
+  }
+  function ValidateEmail(inputText) {
+    var mailformat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+    if (inputText.value.match(mailformat)) {
+      document.myForm.mail.focus();
+      return true;
+    } else {
+      alert("Geçersiz Mail Adresi");
+      document.myForm.mail.focus();
+      return false;
+    }
+  }
+</script>
+<section class="sectionIletisim">
+  <div class="container">
+    <form
+      action="görüntüle.html"
+      onsubmit="return validate();"
+      name="myForm"
+    >
+      <div class="w-25 mx-auto">
+        <div class="w-100 bg-success p-2 text-white rounded-2 text-center">
+          <span>Bizimle İletişime Geçin</span>
+        </div>
+        <div clas="w-100">
+          <label class="form-label">Adınız:</label>
+          <input
+            type="text "
+            placeholder="Adınız "
+            class="form-control border border-info"
+            name="ad"
+            id="ad"
+          />
+        </div>
+        <div clas="w-100">
+          <label class="form-label">Soyadınız:</label>
+          <input
+            type="text "
+            placeholder=" Soyadınız"
+            class="form-control border border-info"
+            name="soyad"
+            id="soyad"
+          />
+        </div>
+        <div class="w-100 mail" onkeyup="check">
+          <label class="form-label">Mail Adresiniz:</label>
+          <input
+            type="text"
+            placeholder="Mail Adresiniz"
+            class="form-control border border-info"
+            name="mail"
+            id="mail"
+          />
+        </div>
+        <div class="w-100">
+          <label class="message">Mesajınız:</label>
+          <textarea
+            name="message"
+            class="form-control"
+            cols="30"
+            rows="10"
+            id="message"
+            placeholder="İletmek istediğiniz mesajınızı yazabilirsiniz..."
+          ></textarea>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-10 col-md-6 col-lg-5 col-xl-5 col-xxl-7">
+            <div
+            class="w-25"
+            id="butongönder"
+            onclick="ValidateEmail(document.myForm.mail)"
+          >
+            <button class="btn btn-primary" type="submit">GÖNDER</button>
+          </div>
+          </div>
+          <div class="col-9 col-md-6 col-lg-5 col-xl-5 col-xxl-4">
+            <div class="w-25" id="butontemizle">
+              <button class="btn btn-secondary" type="reset">TEMİZLE</button>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+    </form>
+  </div>
+</section>
+
+<br><br><br><br><br><br><br>
+<footer class="footer-bg" align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+</svg> eneskrtnc.19@hotmail.com <br> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+</svg> +90 542 112 6054  <br>
+</footer>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
